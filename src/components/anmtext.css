@@ -1,0 +1,76 @@
+
+
+span.animtext {
+  font-size: 9vmin;
+  color: #8bf;
+  text-align: left;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+}
+
+/* Typewriter effect: organizer -> busy */
+@keyframes typing {
+  0.0000%, 27.3488% { content: ""; }
+  1.1395%, 26.2093% { content: "o"; }
+  2.2791%, 25.0698% { content: "or"; }
+  3.4186%, 23.9302% { content: "org"; }
+  4.5581%, 22.7907% { content: "orga"; }
+  5.6977%, 21.6512% { content: "organ"; }
+  6.8372%, 20.5116% { content: "organi"; }
+  7.9767%, 19.3721% { content: "organiz"; }
+  9.1163%, 18.2326% { content: "organize"; }
+  10.2558%, 17.0930% { content: "organizer"; }
+
+  30.7674%, 51.2791% { content: ""; }
+  31.9070%, 50.1395% { content: "b"; }
+  33.0465%, 49.0000% { content: "bu"; }
+  34.1860%, 47.8605% { content: "bus"; }
+  35.3256%, 46.7209% { content: "busy"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 8s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%, 49.9% { content: "organizer"; }
+    50%, 100% { content: "busy"; }
+  }
+
+  .typewriter::before {
+    content: "organizer";
+    animation: sequencePopup 8s linear infinite;
+  }
+}
+ 
+

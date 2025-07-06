@@ -1,0 +1,69 @@
+.todo-main {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+}
+
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.todo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.empty-text {
+  text-align: center;
+  color: #6b7280;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.task-card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.task-icon {
+  color: #9ca3af;
+}
+
+.task-text {
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.check-icon {
+  color: #10b981;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.check-icon:hover {
+  color: #059669;
+}
